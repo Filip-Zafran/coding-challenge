@@ -1,22 +1,19 @@
 import React from 'react';
+import SearchBar from './SearchBar';
+import Sort from './Sort';
+import ProductCard from './ProductCard';
 
-export default function dashboard() {
+export default function Dashboard() {
 	return (
 		<div>
 			<header className="header">
-				<div className="search">
-					<input type="text" />
-					<button> Search </button>
-				</div>
-				<div className="filter">
-					<p>Sort</p>
-					{/* <div className="dropdown">
-							<input class="dropdown-content" />
-						</div> */}
-				</div>
+				<SearchBar />
+				<Sort />
 			</header>
 
-			<div className="result-area">CARDS EXAMPLE</div>
+			<div className="result-area">
+				<ProductCard />
+			</div>
 		</div>
 	);
 }
