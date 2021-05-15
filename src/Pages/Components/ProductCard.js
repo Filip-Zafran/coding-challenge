@@ -17,8 +17,12 @@ export default function ProductCard({ product }) {
 						<div className="product__ask-price">{product.askPrice} &euro;</div>
 					</div>
 					<div className="product__price">
-						<div className="product__price-label"> Current Offer</div>
-						<div className="product__highest-bid">{product.highestBid} &euro;</div>
+						<div className="product__price-label">
+							<b>Current Offer</b>
+						</div>
+						<div className="product__highest-bid">
+							<b>{product.highestBid} &euro;</b>
+						</div>
 					</div>
 				</div>
 			</footer>

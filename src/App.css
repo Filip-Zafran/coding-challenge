@@ -1,3 +1,7 @@
+body * {
+  color: #406E86;
+}
+
 .app {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -25,19 +29,17 @@
   padding: 8px;
   display: block;
   text-decoration: none;
-  /* font-weight: bold; */
-  color: 051d31;
+  font-weight: bold;
+
 }
 
 .header {
   display: flex;
-  border: solid 1px red;
 }
 
 .search {
   flex-grow: 1;
   align-self: center;
-  border: solid 1px blue;
 }
 
 .search input {
@@ -50,13 +52,11 @@
   justify-content: center;
   display: flex;
   flex-grow: 1;
-  border: solid 1px pink;
 }
 
 .result-area {
   display: flex;
   flex-wrap: wrap;
-  border: solid 1px yellow;
 }
 
 button {
@@ -73,31 +73,75 @@ input {
   margin: 0 5%;
 }
 
-/* .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-} */
-
 .product-card {
+  display: flex;
+  flex-direction: column;
   width: 300px;
   margin: 25px;
   border-radius: 6px;
+  box-shadow: 3px 3px 8px lightgray;
 }
 
 .product__image {
   width: 100%;
+}
+
+.product__tags {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.product__tag {
+  background-color: lightgray;
+  color: #051d31;
+  min-width: 50px;
+  padding: 4px 14px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin: 3px;
+  font-weight: bolder;
+  font-size: 12px;
+
+}
+
+.product__footer {
+  margin-top: auto;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
+}
+
+.product__id,
+.product__price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__code {
+  font-weight: bolder;
+  opacity: 0.3;
+}
+
+.product__location {
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+.product__id {
+  border-bottom: 3px solid lightgray;
+  padding: 10px 0;
+}
+
+.product__highest-bid,
+.product__ask-price {
+  font-size: x-large;
+  padding: 2px;
+}
+
+.product__price-label {
+  align-self: center;
 }
