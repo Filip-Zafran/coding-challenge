@@ -54,7 +54,8 @@
 }
 
 .result-area {
-
+  display: flex;
+  flex-wrap: wrap;
   border: solid 1px yellow;
 }
 
@@ -72,7 +73,7 @@ input {
   margin: 0 5%;
 }
 
-.dropdown {
+/* .dropdown {
   position: relative;
   display: inline-block;
 }
@@ -89,4 +90,14 @@ input {
 
 .dropdown:hover .dropdown-content {
   display: block;
+} */
+
+.product-card {
+  width: 300px;
+  margin: 25px;
+  border-radius: 6px;
+}
+
+.product__image {
+  width: 100%;
 }

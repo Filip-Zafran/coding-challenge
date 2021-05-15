@@ -22,11 +22,13 @@ function App() {
 					</ul>
 				</aside>
 
-				<Switch>
-					<Route path="/dashboard">
-						<Dashboard />
-					</Route>
-				</Switch>
+				<main>
+					<Switch>
+						<Route path="/dashboard">
+							<Dashboard />
+						</Route>
+					</Switch>
+				</main>
 			</div>
 		</Router>
 	);
