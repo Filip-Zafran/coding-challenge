@@ -1,31 +1,24 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Dashboard from './Pages/Components/Dashboard';
 
 function App() {
 	return (
-		<div className="app">
-			<aside className="sidebar">
-				<a>DASHBOARD</a>
-				<a>LOG OUT</a>
-			</aside>
+		<Router>
+			<div className="app">
+				<aside className="sidebar">
+					<Link to="/dashboard">DASHBOARD</Link>
+					<Link to="/">LOG OUT</Link>
+				</aside>
 
-			<div>
-				<header className="header">
-					<div className="search">
-						<input type="text" />
-						<button> Search </button>
-					</div>
-					<div className="filter">
-						<p>Sort</p>
-						{/* <div className="dropdown">
-							<input class="dropdown-content" />
-						</div> */}
-					</div>
-				</header>
-
-				<div className="result-area">INPUT CARD</div>
+				<Switch>
+					<Route path="/dashboard">
+						<Dashboard />
+					</Route>
+				</Switch>
 			</div>
-		</div>
+		</Router>
 	);
 }
 
