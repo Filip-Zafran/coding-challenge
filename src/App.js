@@ -8,8 +8,18 @@ function App() {
 		<Router>
 			<div className="app">
 				<aside className="sidebar">
-					<Link to="/dashboard">DASHBOARD</Link>
-					<Link to="/">LOG OUT</Link>
+					<ul>
+						<li>
+							<Link className="sidebar__link" to="/dashboard">
+								DASHBOARD
+							</Link>
+						</li>
+						<li>
+							<Link className="sidebar__link" to="/">
+								LOG OUT
+							</Link>
+						</li>
+					</ul>
 				</aside>
 
 				<Switch>
