@@ -35,3 +35,7 @@ body * {
 .header {
   display: flex;
 }
+
+main>p {
+  padding-left: 30px;
+}

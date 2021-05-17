@@ -21,7 +21,7 @@ export default function Dashboard() {
 					onSearch={(search) => {
 						setFilteredProducts(
 							products.filter((product) => {
-								product.title.toLowerCase().includes(search.toLowerCase());
+								return product.title.toLowerCase().includes(search.toLowerCase());
 							})
 						);
 					}}

@@ -24,6 +24,9 @@ function App() {
 
 				<main>
 					<Switch>
+						<Route exact path="/">
+							<p>Here be Dragons. Try the Dashboard</p>
+						</Route>
 						<Route path="/dashboard">
 							<Dashboard />
 						</Route>
