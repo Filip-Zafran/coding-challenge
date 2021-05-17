@@ -6,7 +6,7 @@ import './Dashboard.css';
 
 export default function Dashboard() {
 	const [ products, setProducts ] = useState([]);
-	const [ filteredProducts, setFilteredProducts ] = useState(products);
+	const [ filteredProducts, setFilteredProducts ] = useState([]);
 
 	useEffect(() => {
 		fetch('https://truckoo-backend-aqkoiog6bq-ew.a.run.app/rest/v1/offers/active-offers')
@@ -14,18 +14,25 @@ export default function Dashboard() {
 			.then((res) => setProducts(res));
 	}, []);
 
+	useEffect(
+		() => {
+			setFilteredProducts(products);
+		},
+		[ products ]
+	);
+
+	const handleSearch = (search) => {
+		const foundProducts = products.filter((product) => {
+			return product.title.toLowerCase().includes(search.toLowerCase());
+		});
+
+		setFilteredProducts(foundProducts);
+	};
+
 	return (
 		<div>
 			<header className="header">
-				<SearchBar
-					onSearch={(search) => {
-						setFilteredProducts(
-							products.filter((product) => {
-								return product.title.toLowerCase().includes(search.toLowerCase());
-							})
-						);
-					}}
-				/>
+				<SearchBar onSearch={handleSearch} />
 				<Sort />
 			</header>
 
