@@ -27,6 +27,8 @@ export default function Dashboard() {
 		});
 
 		setFilteredProducts(foundProducts);
+
+		// search by [tags] to be implemented
 	};
 
 	return (

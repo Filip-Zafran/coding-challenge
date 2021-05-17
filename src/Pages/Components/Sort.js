@@ -5,13 +5,11 @@ export default function Sort() {
 	return (
 		<div className="filter">
 			<p>Sort</p>
-			<div className="dropdown">
-				<input className="sort-input" placeholder="Select sorting filter" />
-				<div className="dropdown-content">
-					<p>Publishing Date</p>
-					<p>Highest Bid</p>
-				</div>
-			</div>
+
+			<select className="dropdown__select">
+				<option value="publishingDate">Publishing Date</option>
+				<option value="highestBid">Highest Bid</option>
+			</select>
 		</div>
 	);
 }
